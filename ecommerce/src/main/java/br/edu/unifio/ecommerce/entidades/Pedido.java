@@ -16,13 +16,13 @@ import lombok.Setter;
 @Setter
 public class Pedido {
     @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDateTime data;
     private String status;
     private Short estoque;
     private BigDecimal valorTotal;
-    @ManyToOne
-    private Clientes Clientes;
 
+    @ManyToOne
+    private Clientes cliente;
 }
